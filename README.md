@@ -21,7 +21,7 @@
   Each link is represented by a recognizable icon for fast identification.
 
 - 📱 **Responsive Design**  
-  Works seamlessly on both desktop and mobile devices.
+  Works seamlessly on desktop. Mobile version in working!
 
 - 🛠 **Customizable**  
   Easily edit the homepage by modifying the HTML and adding your own icons or links.
