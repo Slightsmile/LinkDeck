@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/* Backgroung Image */
 body {
   position: relative;
   min-height: 100vh;
@@ -44,7 +43,7 @@ body::before {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: clamp(30px, 5vw, 50px);
   font-weight: bold;
   color: #fff;
   margin-top: 20px;
@@ -53,7 +52,7 @@ h1 {
 
 .container-headline {
   color: #fff;
-  font-size: 28px;
+  font-size: clamp(20px, 3.5vw, 28px);
   font-weight: bold;
   padding: 8px 24px;
   text-align: center;
@@ -65,7 +64,7 @@ h1 {
 
 .container1 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
@@ -79,7 +78,7 @@ h1 {
 
 .container2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
@@ -96,8 +95,10 @@ h1 {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  height: 100px;
-  width: 200px;
+  height: 100vw;
+  width: 200vw;
+  max-width: 90px;
+  max-height: 90px;
 }
 
 .transparent-btn {
@@ -130,7 +131,7 @@ h1 {
 }
 
 .icon-img {
-  width: 100px;
+  max-width: 100%;
   height: auto;
   display: block;
   background: none;
@@ -140,7 +141,7 @@ h1 {
 
 .containers-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
   gap: 10px;
   flex-wrap: wrap;
@@ -149,7 +150,7 @@ h1 {
 
 .containers-wrapper2 {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
   gap: 10px;
   flex-wrap: wrap;
@@ -158,12 +159,58 @@ h1 {
 
 @media (max-width: 1200px) {
   .containers-wrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   .container1,
   .container2 {
     margin: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container1,
+  .container2 {
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .item {
+    max-width: 70px;
+    max-height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: clamp(24px, 7vw, 40px);
+  }
+
+  .container-headline {
+    font-size: clamp(18px, 4.5vw, 24px);
+    padding: 6px 18px;
+  }
+
+  .container1,
+  .container2 {
+    gap: 10px;
+    padding: 10px;
+  }
+  .container1,
+  .container2 {
+    gap: 10px;
+    padding: 10px;
+  }
+  .container1 {
+    width: 400px;
+  }
+
+  .container2 {
+    width: 250px;
+  }
+
+  .item {
+    max-width: 50px;
+    max-height: 50px;
   }
 }
