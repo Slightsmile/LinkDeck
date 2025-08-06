@@ -41,7 +41,7 @@
 
 - Clone the repository:
 ```bash
-git clone https://github.com/your-username/linkdeck.git
+git clone https://github.com/Slightsmile/LinkDeck.git
 ```
 - Or download the ZIP and extract it.
 
